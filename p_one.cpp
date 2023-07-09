@@ -38,10 +38,14 @@ int main(){
         b.push(y);
     }
     int flag=1;
-    while(!a.empty()){
+    while(!a.empty() && !b.empty()){
         if(a.size()!=b.size() && a.top()!=b.top()){
             flag=0;
+            break;
+
         }
+        a.pop();
+        b.pop();
     }
     if(flag==1){
         cout<<"YES"<<endl;

@@ -18,10 +18,14 @@ int main(){
         q.push(y);
     }
     int flag=1;
-    while(!s.empty()){
-        if(s.size()!=q.size() && s.pop()!=q.pop()){
+    while(!s.empty() && !q.empty()){
+        if(s.size()!=q.size() && s.top()!=q.front()){
             flag=0;
+            break;
         }
+        s.pop();
+        q.pop();
+        
         
     }
     if(flag==1){
